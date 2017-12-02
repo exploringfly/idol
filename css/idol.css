@@ -1,0 +1,106 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background:url("../img/bgp.jpg");
+    background-size: 1360px 700px;
+    overflow: hidden;
+}
+ul{
+    width: 200px;
+    position: relative;
+    margin-left: 400px;
+    margin-bottom: 340px;
+    transform: rotateX(-10deg);
+    transform-style: preserve-3d;
+    -webkit-animation: move 12s linear infinite 0s;
+    -o-animation: move 12s linear infinite 0s;
+    animation: move 12s linear infinite 0s;
+}
+@keyframes move {
+    from{
+        transform:rotateX(-10deg) rotateY(0deg);
+    }
+    to{
+        transform:rotateX(-10deg) rotateY(360deg);
+    }
+}
+ul li{
+    width: 200px;
+    height: 200px;
+    list-style:none;
+    position: absolute;
+    background-color: black;
+}
+ul li img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid skyblue;
+    box-sizing: border-box;
+}
+ul li:nth-child(1){
+    transform: rotateY(60deg) translateZ(200px);
+}
+ul li:nth-child(2){
+    transform: rotateY(120deg) translateZ(200px);
+}
+ul li:nth-child(3){
+    transform: rotateY(180deg) translateZ(200px);
+}
+ul li:nth-child(4){
+    transform: rotateY(240deg) translateZ(200px);
+}
+ul li:nth-child(5){
+    transform: rotateY(300deg) translateZ(200px);
+}
+ul li:nth-child(6){
+    transform: rotateY(360deg) translateZ(200px);
+}
+ul:hover{
+    animation-play-state: paused;
+}
+ul:hover li img{
+    opacity:0.5;
+}
+ ul li:hover img{
+    opacity:1;
+}
+.xin{
+    margin-left: 10px;
+    animation: moving 10s linear infinite 0s;
+    position: absolute;
+}
+@keyframes moving {
+    0%{
+        left: 100px;
+        bottom: 100px;
+        opacity: 1;
+    }
+    20%{
+        left: 300px;
+        bottom: 300px;
+        opacity: 0;
+    }
+    40%{
+        left: 500px;
+        bottom: 500px;
+        opacity: 1;
+    }
+    60%{
+        left: 800px;
+        bottom: 300px;
+        opacity: 0;
+    }
+    80%{
+        left: 1200px;
+        bottom: 100px;
+        opacity: 1;
+    }
+    100%{
+        left: 800px;
+        bottom: -200px;
+    }
+
+}
